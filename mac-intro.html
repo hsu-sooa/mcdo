@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        li { list-style:none; }
+        .picture { list-style:none; padding:0; margin:0; }
+        .picture li { float:left; width:50%;}
+        .picture li a {display:block; margin:5px; border: 1px }
+        .picture li img { display:block; width:50%;  height:auto;}
+        .picture li img:hover { display:block; width:100%;  height:auto;}
+    </style>
+</head>
+
+<body>
+<div data-theme="b">
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>맥도날드 소개 앱</h1>
+        </div>
+        <div data-role="content" style="text-align:center">
+            <img src="mac.jpg" >
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#intro">맥도날드 소개</a></li>
+                <li><a href="#movie" data-rel="dialog">맥도날드 영상</a></li>
+                <li><a href="#wizard3-1" data-rel="dialog">맥도날드 음악</a></li>
+                <li><a href="#gallery">맥도날드 사진</a></li>
+                <li><a href="#link">맥도날드 참고링크</a></li>
+                <li><a href="201858049 조수아/mcareer.html" target="_blank">201858049조수아 이력서</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>made by_sua</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="intro" data-theme="b">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>맥도날드 소개</h1>
+        </div>
+        <div data-role="content">
+            <div  style="text-align:center">
+                <img src="mac2.jpg">
+            </div>
+            <div data-role="collapsible-set" data-theme="e" data-content-theme="e">
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>맥도날드 정의</h3>
+                    <p> 맥도날드는 미국의 패스트푸드 레스토랑 체인으로, 딕 맥도날드, 리차드 제임스 맥도날드와 마크 맥도날드, 모리스 제임스 맥도날드 형제가 1948년 캘리포니아의 샌버너디노에서 시작한 동명의 햄버거 가게에서 유래했다. ‘맥도날드’라는 사명은 설립자 형제의 가족 이름에서 따왔다.
+                        ..생략</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>맥도날드 탄생 및 설립자</h3>
+                    <p>당시 52세였던 레이 크록은 맥도날드 본점의 성공에서 영감을 받아 전국적인 사업을 구상했으며, 형제를 설득해 프렌차이즈 경영권을 따냈다. 1955년 레이 크록은 일리노이주의 디플레인스에 첫 번째 정식 맥도날드 프렌차이즈 매장을 오픈했다.
+                        ..생략</p>
+                </div>
+                <div data-role="collapsible" >
+                    <h3>맥도날드 역사</h3>
+                    <p>레이크록은 1958년 미국 내에서 1억 번째 햄버거를 판매했고, 1959년에는 위스콘신주 퐁뒤라크(Fond du Lac)에 100번째 매장을 열었다. 1961년에는 레이 크록이 맥도날드 형제로부터 사업의 모든 권리를 인수했다.  ..생략</p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>made by_sua</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="movie" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>맥도날드 영상</h1>
+        </div>
+        <div data-role="content" >
+            <div class="ui-bar ui-bar-e">맥도날드 소개 동영상</div><br/>
+            <li><iframe width="470" height="250" src="https://www.youtube.com/embed/E_M4gWU6L7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>></li>
+            <div class="ui-bar ui-bar-e">맥도날드 광고 동영상</div><br/>
+            <li><iframe width="470" height="250" src="https://www.youtube.com/embed/_NLOgY4ad_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe></li>
+        </div>
+        <div data-role="footer" data-theme="b">
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-1">
+        <div data-role="header">
+            <h1>맥도날드 노래1</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">빅맥송</div><br/>
+            <audio controls width="100%" preload="metadata">
+                <source src="macsong.mp3" type="audio/mp3">
+            </audio>
+            <img src="bigmac.jpg" alt="" width="300" height="450">
+        </div>
+        <div data-role="footer">
+            <a href="#home"  data-direction="reverse">이전</a>
+            <a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-2">
+        <div data-role="header">
+            <h1>맥도날드 노래2</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">빅맥송 랩버전</div><br/>
+            <audio controls width="100%" preload="metadata">
+                <source src="macsongrap.mp3" type="audio/mp3">
+            </audio>
+            <img src="bigmac2.jpg" alt="" width="400" height="400">
+        </div>
+        <div data-role="footer">
+            <a href="#wizard3-1"  data-direction="reverse">이전</a>
+            <a href="#home">처음</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="gallery"  data-theme="b">
+        <div data-role="header" data-position="fixed"  data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>맥도날드 갤러리</h1>
+        </div>
+        <div data-role="content">
+            <ul class="picture">
+                <li><a href="macp1.png" rel="external"><img src="macp1.png" /></a></li>
+                <li><a href="macp2.png" rel="external"><img src="macp2.png" /></a></li>
+                <li><a href="macp3.png" rel="external"><img src="macp3.png" /></a></li>
+                <li><a href="macp4.png" rel="external"><img src="macp4.png" /></a></li>
+                <li><a href="macp5.png" rel="external"><img src="macp5.png" /></a></li>
+                <li><a href="macp6.png" rel="external"><img src="macp6.png" /></a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>맥도날드사랑_조수아</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="link" data-theme="b">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+            <h1>맥도날드 참조링크</h1>
+        </div>
+        <div data-role="content">
+            <div  style="text-align:center">
+                <img src="mac2.jpg">
+            </div>
+            <div data-role="collapsible-set" data-theme="e" data-content-theme="e">
+                <div data-role="collapsible" data-collapsed="false"><h3>링크 리스트</h3>
+                    <a href="http://www.mcdonalds.co.kr">
+                        <img class="portal" src="mac.jpg" width="40" height="40" alt="맥도날드 홈페이지 이동"/><h3>- 맥도날드 홈페이지</h3>
+                    </a><br>
+                    <a href="https://ko.wikipedia.org/wiki/%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C">
+                        <img class="portal" src="mac.jpg" width="40" height="40" alt="위키백과 맥도날드 이동"/><h3>- 위키백과 맥도날드</h3>
+                    </a><br>
+                    <a href="https://terms.naver.com/entry.nhn?docId=2697886&cid=43168&categoryId=43168">
+                        <img class="portal" src="mac.jpg" width="40" height="40" alt="지식백과 맥도날드 이동"/><h3>- 지식백과 맥도날드</h3>
+                    </a><br>
+                </div>
+            </div>
+        </div>
+        <data-role="footer" data-position="fixed" data-theme="b">
+        <h1>made by_sua</h1>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
